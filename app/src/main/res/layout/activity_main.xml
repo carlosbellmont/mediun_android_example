@@ -21,4 +21,17 @@
         android:layout_margin="16dp"
         android:text="Button" />
 
+    <Button
+        android:id="@+id/b_boton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Button2" />
+
+    <Button
+        android:id="@+id/b_boton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Mostrar Toast" />
 </LinearLayout>
