@@ -45,4 +45,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Añadir un segundo botón que cuando hagas click, cambie el texto del textView a "Se ha pulsado el botón 2"
+    // Además, cuando pulses en botón 1 otra vez, deberá volver a empezar a contar desde 1.
 }
