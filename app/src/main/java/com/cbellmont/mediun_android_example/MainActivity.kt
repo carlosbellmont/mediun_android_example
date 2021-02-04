@@ -7,9 +7,40 @@ import android.widget.TextView
 import com.cbellmont.mediun_android_example.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding : ActivityMainBinding
+
+    var numero = 1
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        configurarTextView()
+        configurarBoton()
+
+    }
+
+    private fun configurarBoton() {
+        binding.bBoton.text = "Púlsame"
+        binding.bBoton.setOnClickListener {
+            binding.tvHello.text = "Has hecho click $numero vez!"
+            numero++
+        }
+
+        /*
+        Esto no funcionaría bien porque la var numero se muere y resucita cada vez que hacemos un click
+        binding.bBoton.setOnClickListener {
+            var numero = 1
+            binding.tvHello.text = "Has hecho click $numero vez!"
+            numero++
+        }
+         */
+    }
+
+    private fun configurarTextView() {
+        binding.tvHello.text = "Hola que tal"
     }
 }
