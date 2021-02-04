@@ -43,4 +43,6 @@ class MainActivity : AppCompatActivity() {
     private fun configurarTextView() {
         binding.tvHello.text = "Hola que tal"
     }
+
+    // Añadir un segundo botón que cuando hagas click, cambie el texto del textView a "Se ha pulsado el botón 2"
 }
